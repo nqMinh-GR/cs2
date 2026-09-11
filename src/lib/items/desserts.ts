@@ -1,0 +1,33 @@
+import type { AuthoredItem } from './types';
+
+// Sweet snacks and chè. Photos cloned from truanayangi.com/dishes.
+export const desserts: AuthoredItem[] = [
+  { name: 'Bánh flan', nameEn: 'Flan', sub: 'Caramen trứng sữa • Một bánh', subEn: 'Caramen trứng sữa • Một bánh', price: 15, icon: 'plate', photo: '/items/161-banh-flan.webp', veg: true },
+  { name: 'Kem chuối', nameEn: 'Banana ice cream', sub: 'Chuối, cốt dừa & đậu phộng • Một miếng', subEn: 'Chuối, cốt dừa & đậu phộng • Một miếng', price: 15, icon: 'plate', photo: '/items/352-kem-chuoi.webp', veg: true },
+  { name: 'Tào phớ', nameEn: 'Tofu pudding', sub: 'Tàu hũ mềm & nước đường gừng • Một chén', subEn: 'Tàu hũ mềm & nước đường gừng • Một chén', price: 15, icon: 'plate', photo: '/items/348-tao-pho.webp', veg: true },
+  { name: 'Bánh bò hấp', nameEn: 'Steamed banh bo', sub: 'Bánh bò mềm & nước cốt dừa • Một phần', subEn: 'Bánh bò mềm & nước cốt dừa • One serving', price: 20, icon: 'plate', photo: '/items/333-banh-bo-hap.webp', veg: true },
+  { name: 'Bánh chuối hấp', nameEn: 'Steamed banana cake', sub: 'Chuối hấp, cốt dừa & mè • Một phần', subEn: 'Chuối hấp, cốt dừa & mè • One serving', price: 20, icon: 'plate', photo: '/items/337-banh-chuoi-hap.webp', veg: true },
+  { name: 'Bánh da lợn', nameEn: 'Layered pandan cake', sub: 'Lá dứa, đậu xanh & cốt dừa • Một phần', subEn: 'Lá dứa, đậu xanh & cốt dừa • One serving', price: 20, icon: 'plate', photo: '/items/335-banh-da-lon.webp', veg: true },
+  { name: 'Bánh tiêu', nameEn: 'Hollow fried bread', sub: 'Bánh tiêu phủ mè • Hai bánh', subEn: 'Bánh tiêu phủ mè • Hai bánh', price: 20, icon: 'plate', photo: '/items/332-banh-tieu.webp', veg: true },
+  { name: 'Chuối chiên', nameEn: 'Fried banana', sub: 'Chuối ép chiên giòn • Hai bánh', subEn: 'Chuối ép chiên giòn • Hai bánh', price: 20, icon: 'plate', photo: '/items/330-chuoi-chien.webp', veg: true },
+  { name: 'Bánh bò nướng', nameEn: 'Baked banh bo', sub: 'Bánh bò lá dứa nướng • Hai lát', subEn: 'Bánh bò lá dứa nướng • Hai lát', price: 25, icon: 'plate', photo: '/items/334-banh-bo-nuong.webp', veg: true },
+  { name: 'Bánh cam', nameEn: 'Sesame balls', sub: 'Vỏ mè, nhân đậu xanh • Phần 3 bánh', subEn: 'Vỏ mè, nhân đậu xanh • Phần 3 bánh', price: 25, icon: 'plate', photo: '/items/331-banh-cam.webp', veg: true },
+  { name: 'Bánh khoai mì nướng', nameEn: 'Baked cassava cake', sub: 'Khoai mì & nước cốt dừa • Hai lát', subEn: 'Khoai mì & nước cốt dừa • Hai lát', price: 25, icon: 'plate', photo: '/items/336-banh-khoai-mi-nuong.webp', veg: true },
+  { name: 'Bánh su kem', nameEn: 'Cream puffs', sub: 'Bánh su nhân kem sữa • Phần 4 bánh', subEn: 'Bánh su nhân kem sữa • Phần 4 bánh', price: 25, icon: 'plate', photo: '/items/338-banh-su-kem.webp', veg: true },
+  { name: 'Bánh trứng nướng', nameEn: 'Baked egg tart', sub: 'Vỏ bánh giòn & nhân trứng sữa • Một bánh', subEn: 'Vỏ bánh giòn & nhân trứng sữa • Một bánh', price: 25, icon: 'plate', photo: '/items/163-banh-trung-nuong.webp', veg: true },
+  { name: 'Bánh đúc lá dứa', nameEn: 'Pandan banh duc', sub: 'Bánh đúc ngọt, cốt dừa & nước đường • Một phần', subEn: 'Bánh đúc ngọt, cốt dừa & nước đường • One serving', price: 25, icon: 'plate', photo: '/items/353-banh-duc-la-dua.webp', veg: true },
+  { name: 'Chè bưởi', nameEn: 'Pomelo sweet soup', sub: 'Cùi bưởi, đậu xanh & cốt dừa • Một ly', subEn: 'Cùi bưởi, đậu xanh & cốt dừa • One glass', price: 25, icon: 'plate', photo: '/items/340-che-buoi.webp', veg: true },
+  { name: 'Chè trôi nước', nameEn: 'Sticky rice balls in ginger syrup', sub: 'Viên nếp nhân đậu xanh & nước gừng • Một chén', subEn: 'Viên nếp nhân đậu xanh & nước gừng • Một chén', price: 25, icon: 'plate', photo: '/items/345-che-troi-nuoc.webp', veg: true },
+  { name: 'Chè đậu xanh', nameEn: 'Mung-bean sweet soup', sub: 'Đậu xanh nấu mềm & cốt dừa • Một chén', subEn: 'Đậu xanh nấu mềm & cốt dừa • Một chén', price: 25, icon: 'plate', photo: '/items/343-che-dau-xanh.webp', veg: true },
+  { name: 'Chè đậu đỏ', nameEn: 'Red-bean sweet soup', sub: 'Đậu đỏ & nước cốt dừa • Một ly', subEn: 'Đậu đỏ & nước cốt dừa • One glass', price: 25, icon: 'plate', photo: '/items/344-che-dau-do.webp', veg: true },
+  { name: 'Sữa chua mít', nameEn: 'Jackfruit yogurt', sub: 'Sữa chua, mít & thạch • Một chén', subEn: 'Sữa chua, mít & thạch • Một chén', price: 25, icon: 'plate', photo: '/items/349-sua-chua-mit.webp', veg: true },
+  { name: 'Chè ba màu', nameEn: 'Three-colour che', sub: 'Đậu đỏ, đậu xanh & thạch lá dứa • Một ly', subEn: 'Đậu đỏ, đậu xanh & thạch lá dứa • One glass', price: 30, icon: 'plate', photo: '/items/342-che-ba-mau.webp', veg: true },
+  { name: 'Chè khoai dẻo', nameEn: 'Chewy potato sweet soup', sub: 'Khoai dẻo, thạch & sữa dừa • Một chén', subEn: 'Khoai dẻo, thạch & sữa dừa • Một chén', price: 30, icon: 'plate', photo: '/items/346-che-khoai-deo.webp', veg: true },
+  { name: 'Chè sương sa hạt lựu', nameEn: 'Agar jelly sweet soup', sub: 'Thạch, hạt lựu & đậu xanh • Một ly', subEn: 'Thạch, hạt lựu & đậu xanh • One glass', price: 30, icon: 'plate', photo: '/items/347-che-suong-sa-hat-luu.webp', veg: true },
+  { name: 'Chè đậu đen', nameEn: 'Black bean sweet soup', sub: 'Đậu đen & nước cốt dừa • Một chén', subEn: 'Đậu đen & nước cốt dừa • Một chén', price: 30, icon: 'plate', photo: '/items/162-che-dau-den.webp', veg: true },
+  { name: 'Kem xôi', nameEn: 'Sticky-rice ice cream', sub: 'Xôi lá dứa & kem dừa • Một chén', subEn: 'Xôi lá dứa & kem dừa • Một chén', price: 30, icon: 'plate', photo: '/items/351-kem-xoi.webp', veg: true },
+  { name: 'Chè Thái', nameEn: 'Thai mixed sweet soup', sub: 'Mít, thạch & sữa dừa • Một ly', subEn: 'Mít, thạch & sữa dừa • One glass', price: 35, icon: 'plate', photo: '/items/341-che-thai.webp', veg: true },
+  { name: 'Kem dừa', nameEn: 'Coconut ice cream', sub: 'Kem dừa, dừa sợi & đậu phộng • Một phần', subEn: 'Kem dừa, dừa sợi & đậu phộng • One serving', price: 35, icon: 'plate', photo: '/items/350-kem-dua.webp', veg: true },
+  { name: 'Bông lan trứng muối', nameEn: 'Salted-egg sponge cake', sub: 'Bông lan, trứng muối & chà bông • Một hộp nhỏ', subEn: 'Bông lan, trứng muối & chà bông • Một hộp nhỏ', price: 40, icon: 'plate', photo: '/items/339-bong-lan-trung-muoi.webp', veg: true },
+  { name: 'Bánh cheesecake', nameEn: 'Cheesecake', sub: 'Bánh phô mai & quả mọng • Một lát', subEn: 'Bánh phô mai & quả mọng • Một lát', price: 80, icon: 'plate', photo: '/items/164-banh-cheesecake.webp', veg: true },
+];

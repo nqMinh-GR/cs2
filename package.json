@@ -1,0 +1,45 @@
+{
+  "name": "truanayangi",
+  "version": "2.0.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test \"tests/*.test.mjs\" && node tests/personal-pool.cjs",
+    "typecheck": "tsc --noEmit",
+    "model:build": "node tools/model/convert-fbx.mjs && python3 tools/model/pack-textures.py && node tools/model/build-glb.mjs && node tools/model/inspect-lid.mjs"
+  },
+  "dependencies": {
+    "@base-ui/react": "1.8.0",
+    "@fontsource-variable/saira": "5.3.0",
+    "@react-three/fiber": "9.7.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "1.43.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tailwind-merge": "3.6.0",
+    "three": "0.185.1",
+    "tw-animate-css": "1.4.0"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "4.5.0",
+    "@gltf-transform/extensions": "4.5.0",
+    "@gltf-transform/functions": "4.5.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.5.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@types/three": "0.185.4",
+    "@vitejs/plugin-react": "6.1.1",
+    "esbuild": "0.28.2",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
