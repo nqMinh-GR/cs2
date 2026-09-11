@@ -30,7 +30,7 @@ export function InventoryScreen({ language, onLanguage, sound, onSound, profile,
   const preview = useRef<HTMLDivElement>(null);
   const select = (def: CaseDef) => {
     onSelect(def);
-    if (window.matchMedia('(max-width: 1023px)').matches) preview.current?.scrollIntoView({ block: 'start', behavior: reducedMotion ? 'auto' : 'smooth' });
+    if (window.matchMedia('(max-width: 1023px) and (min-height: 541px), (max-width: 1023px) and (orientation: portrait)').matches) preview.current?.scrollIntoView({ block: 'start', behavior: reducedMotion ? 'auto' : 'smooth' });
   };
 
   useEffect(() => {

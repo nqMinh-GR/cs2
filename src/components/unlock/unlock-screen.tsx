@@ -53,7 +53,6 @@ export function UnlockScreen({ def, items, language, onLanguage, sound, onSound,
   const [expanded, setExpanded] = useState(initialExpanded);
   const unlockRef = useRef<HTMLButtonElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
-  const stage = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState('');
   const needsPassword = !!def.gated && !adultUnlocked;
 
@@ -68,7 +67,9 @@ export function UnlockScreen({ def, items, language, onLanguage, sound, onSound,
   useEffect(() => {
     if (phase === 'unlocking') {
       setStatus(t.unlocking);
-      if (window.matchMedia('(max-width: 767px)').matches) stage.current?.scrollIntoView({ block: 'start', behavior: reducedMotion ? 'auto' : 'smooth' });
+      if (window.matchMedia('(max-width: 767px), (orientation: landscape) and (max-height: 540px)').matches) {
+        window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+      }
     } else if (phase === 'revealed' && result) {
       setStatus(commerce
         ? fmt(t.resultStatus, { name: itemName(result, language), tier: t.tiers[result.rarity], price: priceLabel(result.price, language, true) })
@@ -90,7 +91,7 @@ export function UnlockScreen({ def, items, language, onLanguage, sound, onSound,
           <h1 ref={heading} tabIndex={-1} className="unlock-title">{t.unlockTitle}</h1>
           <p className="unlock-subtitle">{caseName(def, language)}</p>
         </hgroup>
-        <div ref={stage} className={`stage ${phase !== 'idle' ? 'is-unlocking' : ''} ${phase === 'revealed' ? 'is-revealed' : ''}`} aria-busy={busy}>
+        <div className={`stage ${phase !== 'idle' ? 'is-unlocking' : ''} ${phase === 'revealed' ? 'is-revealed' : ''}`} aria-busy={busy}>
           <CaseStage phase={phase} startedAt={startedAt} reducedMotion={reducedMotion} language={language} hue={def.hue} caseId={def.id} decal={decalFor(def)} variant="unlock" />
           <Reel items={flow.reel.map(({ id, food }) => ({ id, item: food }))} visibleStart={flow.visibleStart} maskGold={flow.maskGold} winnerSlot={winnerSlot} language={language} viewportRef={flow.viewport} attachTrack={flow.attachTrack} hidden={phase === 'idle' || phase === 'unlocking'} />
           <div className="stage-dim" aria-hidden="true" />

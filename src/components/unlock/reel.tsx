@@ -20,14 +20,16 @@ type Props = {
 /** Always mounted (opacity-hidden while idle) so `clientWidth` is valid the moment a spin starts. */
 export function Reel({ items, visibleStart, maskGold, winnerSlot, language, viewportRef, attachTrack, hidden }: Props) {
   return (
-    <div className={`reel-window ${hidden ? 'is-hidden' : ''}`} ref={viewportRef} aria-hidden="true">
-      <div className="reel-track" ref={attachTrack}>
-        {items.filter(({ id }) => id >= visibleStart && id < visibleStart + REEL_WINDOW).map(({ item, id }) => (
-          <Card key={id} item={item} language={language} slot={id} maskGold={maskGold} isWinner={winnerSlot === id} />
-        ))}
+    <div className="reel-slot">
+      <div className={`reel-window ${hidden ? 'is-hidden' : ''}`} ref={viewportRef} aria-hidden="true">
+        <div className="reel-track" ref={attachTrack}>
+          {items.filter(({ id }) => id >= visibleStart && id < visibleStart + REEL_WINDOW).map(({ item, id }) => (
+            <Card key={id} item={item} language={language} slot={id} maskGold={maskGold} isWinner={winnerSlot === id} />
+          ))}
+        </div>
+        <div className="reel-focus" />
+        <div className="selector-line" />
       </div>
-      <div className="reel-focus" />
-      <div className="selector-line" />
     </div>
   );
 }
